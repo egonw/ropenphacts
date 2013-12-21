@@ -17,6 +17,9 @@ commons libraries.
 
 # Compile from source
 
+    $ cd java
+    $ groovy build.groovy
+    $ cd ..
     $ R CMD check ropenphactslibs
     $ R CMD build ropenphactslibs
     $ R CMD check ropenphacts
