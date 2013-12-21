@@ -1,0 +1,4 @@
+rrdf/inst/doc/tutorial.pdf
+*.Rcheck/
+*.tar.gz
+*~

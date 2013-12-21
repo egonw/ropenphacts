@@ -1,0 +1,11 @@
+Package: ropenphactslibs
+Type: Package
+Title: ropenphactslibs - package with ops4j and Apache HTTP libraries
+Version: 1.0.0
+Date: 2013-12-21
+Author: Egon Willighagen <egon.willighagen@gmail.com>
+Maintainer: Egon Willighagen <egon.willighagen@gmail.com>
+Depends: R (>= 2.0.0), rJava
+Description: The ops4j and Apache HTTP Client libraries. HTTPClient are distributed under their original licenses.
+License: AGPL-3
+LazyLoad: yes
