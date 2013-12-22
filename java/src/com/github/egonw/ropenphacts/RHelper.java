@@ -35,4 +35,20 @@ public class RHelper {
     return searcher.freetext(query);
   }
 
+  // Structures
+
+  public static String smiles2uri(String server, String appID, String appKey, String smiles)
+  throws Exception {
+    Structures searcher = Structures.getInstance(server, appID, appKey);
+    return searcher.smiles2uri(smiles);
+  }
+
+  // Compounds
+
+  public static String pharmacologyCount(String server, String appID, String appKey, String uri)
+  throws Exception {
+    Compounds searcher = Compounds.getInstance(server, appID, appKey);
+    return searcher.pharmacologyCount(uri);
+  }
+
 }
