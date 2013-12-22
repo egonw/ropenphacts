@@ -19,10 +19,20 @@ import com.github.egonw.ops4j.*;
 
 public class RHelper {
 
+  // Mappings
+
   public static String mapUri(String server, String appID, String appKey, String uri)
   throws Exception {
     Mapping mapper = Mapping.getInstance(server, appID, appKey);
     return mapper.mapUri(uri);
+  }
+
+  // Concepts
+
+  public static String freetext(String server, String appID, String appKey, String query)
+  throws Exception {
+    Concepts searcher = Concepts.getInstance(server, appID, appKey);
+    return searcher.freetext(query);
   }
 
 }
