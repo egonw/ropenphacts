@@ -13,7 +13,17 @@
 # You should have received a copy of the GNU Affero General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-mapUri <- function(server, key, appid, uri) {
+mapUri <- function(server=NA, key=NA, appid=NA, uri) {
+	if (exists("getOpenPHACTSConfig")) {
+		config = getOpenPHACTSConfig()
+		if (is.na(server)) server = config$server
+		if (is.na(key)) key = config$key
+		if (is.na(appid)) appid = config$appid
+	}
+	if (is.na(server)) stop("You must provide an Open PHACTS server.")
+	if (is.na(appid)) stop("You must provide an Open PHACTS API app ID.")
+	if (is.na(key)) stop("You must provide an Open PHACTS API app key.")
+
 	results <- .jcall(
 		"com/github/egonw/ropenphacts/RHelper",
 		"S",
