@@ -51,4 +51,11 @@ public class RHelper {
     return searcher.pharmacologyCount(uri);
   }
 
+  public static String pharmacologyList(String server, String appID, String appKey, 
+    String uri, int page, int pageSize)
+  throws Exception {
+    Compounds searcher = Compounds.getInstance(server, appID, appKey);
+    return searcher.pharmacologyList(uri, page, pageSize);
+  }
+
 }

@@ -31,13 +31,13 @@ smiles2uri <- function(server=NA, key=NA, appid=NA, smiles) {
                 server, appid, key, smiles
 	)
         store = fromString.rdf(results, "TURTLE")
-        return(results)
 	query = paste(
-		"PREFIX skos: <http://www.w3.org/2004/02/skos/core#> ",
-		"SELECT ?match WHERE {",
-		" ?concept skos:exactMatch ?match .",
+		"PREFIX foaf: <http://xmlns.com/foaf/0.1/> ",
+		"SELECT ?uri WHERE {",
+		" ?concept foaf:primaryTopic ?uri .",
 		"}"
 	)
-	results = sparql.rdf(store, query)
-	return(results)
+	results = sparql.rdf(store, query);
+	if (nrow(results) < 1) return(0);
+	return(results[1,1]);
 }
