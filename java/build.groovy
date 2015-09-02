@@ -4,6 +4,7 @@ ant.mkdir(dir:"bin")
 ant.javac(
   srcdir:"src", destdir:"bin",
   includes:"**/*.java",
+  target:1.6,
   fork:"true") {
   classpath {
     fileset dir: "../ropenphacts/inst/java", {
