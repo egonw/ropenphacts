@@ -5,7 +5,7 @@ R client for the Open PHACTS platform.
 
 # Copyright / License
 
-Copyright (C) 2013-2015  Egon Willighagen
+Copyright (C) 2013-2016  Egon Willighagen
 
 Licensed AGPL v3 for the package. It depends on the LGPL v2.1 or later ops4j
 from http://github.com/egonw/ops4j/ and the Apache io, logging, and httpclient
@@ -28,5 +28,11 @@ commons libraries, which have Apache licenses.
     $ cd ..
     $ R CMD build ropenphactslibs
     $ R CMD check --as-cran ropenphactslibs
-    $ R CMD build ropebphacts
+    $ R CMD build ropenphacts
     $ R CMD check --as-cran ropenphacts
+
+## Debian/Ubuntu
+
+Debian GNU/Linux and Ubuntu users are recommended to do first:
+
+    $ sudo apt-get install r-cran-rjava groovy ant-contrib
