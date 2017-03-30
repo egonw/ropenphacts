@@ -8,7 +8,7 @@ Map one URI to other URIs.
 }
 \usage{
 mapUri(
-  server="https://beta.openphacts.org/", key=0, appid=0,
+  server="https://beta.openphacts.org/2.1/", key=0, appid=0,
   uri="http://identifiers.org/ensembl/ENSG00000100030"
 )
 }
