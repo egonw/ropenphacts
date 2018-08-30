@@ -28,7 +28,7 @@ require(rJava, quietly=TRUE)
         	"httpclient-4.2.5.jar",
         	"httpcore-4.2.4.jar",
 		"commons-io-2.4.jar",
-		"ops4j-0.0.1-SNAPSHOT.jar"
+		"ops4j-0.0.3-SNAPSHOT.jar"
 	)
 	.jpackage(pkg, jars=jars)
 }

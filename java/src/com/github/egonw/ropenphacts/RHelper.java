@@ -58,4 +58,19 @@ public class RHelper {
     return searcher.pharmacologyList(uri, page, pageSize);
   }
 
+  // Interactions
+
+  public static String interactionsForEntityCount(String server, String appID, String appKey, String uri)
+  throws Exception {
+    Interactions searcher = Interactions.getInstance(server, appID, appKey);
+    return searcher.interactionsForEntityCount(uri);
+  }
+
+  public static String interactionsForEntityList(String server, String appID, String appKey, 
+    String uri, int page, int pageSize)
+  throws Exception {
+    Interactions searcher = Interactions.getInstance(server, appID, appKey);
+    return searcher.interactionsForEntityList(uri, page, pageSize);
+  }
+
 }

@@ -1,8 +1,8 @@
 Package: ropenphactslibs
 Type: Package
 Title: ropenphactslibs - package with ops4j and Apache HTTP libraries
-Version: 1.0.0
-Date: 2013-12-21
+Version: 1.1.0
+Date: 2018-08-30
 Author: Egon Willighagen <egon.willighagen@gmail.com>
 Maintainer: Egon Willighagen <egon.willighagen@gmail.com>
 Depends: R (>= 2.0.0), rJava

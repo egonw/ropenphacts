@@ -1,11 +1,11 @@
 Package: ropenphacts
 Type: Package
 Title: ropenphacts - support for the Open PHACTS platform
-Version: 1.0.1
-Date: 2015-09-02
+Version: 1.1.0
+Date: 2018-08-30
 Author: Egon Willighagen <egon.willighagen@gmail.com>
 Maintainer: Egon Willighagen <egon.willighagen@gmail.com>
-Depends: R (>= 2.0.0), rJava, ropenphactslibs (>= 1.0.0), rrdf (>= 1.9.2)
+Depends: R (>= 2.0.0), rJava, ropenphactslibs (>= 1.1.0), rrdf (>= 2.2.0)
 Description: Work with the Open PHACTS data.
 License: AGPL-3
 LazyLoad: yes
