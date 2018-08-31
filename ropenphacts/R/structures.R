@@ -30,14 +30,14 @@ smiles2uri <- function(server=NA, key=NA, appid=NA, smiles) {
 		"smiles2uri",
                 server, appid, key, smiles
 	)
-        store = fromString.rdf(results, "TURTLE")
+        store = rrdf::fromString.rdf(results, "TURTLE")
 	query = paste(
 		"PREFIX foaf: <http://xmlns.com/foaf/0.1/> ",
 		"SELECT ?uri WHERE {",
 		" ?concept foaf:primaryTopic ?uri .",
 		"}"
 	)
-	results = sparql.rdf(store, query);
+	results = rrdf::sparql.rdf(store, query);
 	if (nrow(results) < 1) return(0);
 	return(results[1,1]);
 }

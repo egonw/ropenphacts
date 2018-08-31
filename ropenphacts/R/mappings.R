@@ -30,13 +30,13 @@ mapUri <- function(server=NA, key=NA, appid=NA, uri) {
 		"mapUri",
                 server, appid, key, uri
 	)
-        store = fromString.rdf(results, "TURTLE")
+        store = rrdf::fromString.rdf(results, "TURTLE")
 	query = paste(
 		"PREFIX skos: <http://www.w3.org/2004/02/skos/core#> ",
 		"SELECT ?match WHERE {",
 		" ?concept skos:exactMatch ?match .",
 		"}"
 	)
-	results = sparql.rdf(store, query)
+	results = rrdf::sparql.rdf(store, query)
 	return(results)
 }

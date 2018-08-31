@@ -30,7 +30,7 @@ freetext <- function(server=NA, key=NA, appid=NA, query) {
 		"freetext",
                 server, appid, key, query
 	)
-        store = fromString.rdf(results, "TURTLE")
+        store = rrdf::fromString.rdf(results, "TURTLE")
         return(results)
 	query = paste(
 		"PREFIX skos: <http://www.w3.org/2004/02/skos/core#> ",
@@ -38,6 +38,6 @@ freetext <- function(server=NA, key=NA, appid=NA, query) {
 		" ?concept skos:exactMatch ?match .",
 		"}"
 	)
-	results = sparql.rdf(store, query)
+	results = rrdf::sparql.rdf(store, query)
 	return(results)
 }

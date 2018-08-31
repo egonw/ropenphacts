@@ -30,14 +30,14 @@ pharmacologyCount <- function(server=NA, key=NA, appid=NA, uri) {
 		"pharmacologyCount",
                 server, appid, key, uri
 	)
-        store = fromString.rdf(results, "TURTLE")
+        store = rrdf::fromString.rdf(results, "TURTLE")
 	query = paste(
 		"PREFIX opsapi: <http://www.openphacts.org/api#> ",
 		"SELECT ?count WHERE {",
 		" ?concept opsapi:compoundPharmacologyTotalResults ?count .",
 		"}"
 	)
-	results = sparql.rdf(store, query);
+	results = rrdf::sparql.rdf(store, query);
 	if (nrow(results) < 1) return(0);
 	return(results[1,1]);
 }
@@ -59,7 +59,7 @@ pharmacologyList <- function(server=NA, key=NA, appid=NA, uri, page=1, size=5) {
 		"pharmacologyList",
                 server, appid, key, uri, as.integer(page), as.integer(size)
 	)
-	store = fromString.rdf(results, "TURTLE")
+	store = rrdf::fromString.rdf(results, "TURTLE")
 	query = paste(
 		"PREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#> ",
 		"PREFIX skos: <http://www.w3.org/2004/02/skos/core#> ",
@@ -73,7 +73,7 @@ pharmacologyList <- function(server=NA, key=NA, appid=NA, uri, page=1, size=5) {
 		" }",
 		"}"
 	)
-	results = sparql.rdf(store, query)
+	results = rrdf::sparql.rdf(store, query)
 	return(results)
 }
 
