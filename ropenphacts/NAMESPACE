@@ -1,3 +1,11 @@
 import("rJava")
 import("ropenphactslibs")
-export(mapUri, freetext, smiles2uri, pharmacologyCount, pharmacologyList, interactionsForEntityCount, interactionsForEntityList)
+import("rrdf")
+export(
+  getOpenPHACTSConfig,
+  mapUri,
+  freetext,
+  smiles2uri,
+  pharmacologyCount, pharmacologyList,
+  interactionsForEntityCount, interactionsForEntityList
+)
