@@ -7,10 +7,7 @@ Map one URI to other URIs
 Map one URI to other URIs.
 }
 \usage{
-mapUri(
-  server="https://beta.openphacts.org/2.1/", key=0, appid=0,
-  uri="http://identifiers.org/ensembl/ENSG00000100030"
-)
+mapUri(server=NA, key=NA, appid=NA, uri)
 }
 \arguments{
   \item{server}{
@@ -31,6 +28,12 @@ The response of the server.
 }
 \author{
 Egon Willighagen
+}
+\examples{
+mapUri(
+  server="https://beta.openphacts.org/2.2/", key="4f96300d4516f706fbd75db7f9ad4b4b", appid="c9a77432",
+  uri="http://identifiers.org/ensembl/ENSG00000100030"
+)
 }
 \keyword{ URI }
 \keyword{ mapping }
