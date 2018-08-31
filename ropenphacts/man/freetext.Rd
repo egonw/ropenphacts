@@ -8,10 +8,7 @@ Do a free text search for concepts. It returns one or more Concept Wiki
 URIs.
 }
 \usage{
-freetext(
-  server="https://beta.openphacts.org/1.3/", key="0", appid="0",
-  query="water"
-)
+freetext(server=NA, key=NA, appid=NA, query)
 }
 \arguments{
   \item{server}{
@@ -32,6 +29,14 @@ The response of the server.
 }
 \author{
 Egon Willighagen
+}
+\examples{
+\dontrun{
+freetext(
+  server="https://beta.openphacts.org/2.2/", key="4f96300d4516f706fbd75db7f9ad4b4b", appid="c9a77432",
+  query="water"
+)
+}
 }
 \keyword{ URI }
 \keyword{ mapping }
