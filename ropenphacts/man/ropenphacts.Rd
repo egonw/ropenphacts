@@ -6,7 +6,7 @@
 Functionality to work with the Open PHACTS platform.
 }
 \description{
-Methods to query data from the Open PHACTS platform..
+Methods to query data from the Open PHACTS platform.
 }
 \details{
 Package based on the ops4j library to make R a client
